@@ -31,8 +31,9 @@ export function useIndex() {
       setIsSearch(true);
       const filtered = listUser.filter((e) => e.title.includes(searchText));
       setSearchedList(filtered);
+    } else {
+      setIsSearch(false);
     }
-    setIsSearch(false);
   }
 
   useEffect(() => {
